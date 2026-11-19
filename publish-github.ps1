@@ -60,9 +60,10 @@ $repoApi = $null
 
 function Api($method, $uri, $bodyObj) {
     $p = @{ Method = $method; Uri = $uri; Headers = $Headers }
+    $p.TimeoutSec = 60
     if ($null -ne $bodyObj) {
-        $p.Body = ($bodyObj | ConvertTo-Json -Depth 8 -Compress)
-        $p.ContentType = 'application/json'
+        $p.Body = [System.Text.Encoding]::UTF8.GetBytes(($bodyObj | ConvertTo-Json -Depth 8 -Compress))
+        $p.ContentType = 'application/json; charset=utf-8'
     }
     Invoke-RestMethod @p
 }
@@ -181,7 +182,7 @@ try {
         tag_name         = "v$version"
         target_commitish = 'main'
         name             = "v$version"
-        body             = (Get-Content (Join-Path $PSScriptRoot 'CHANGELOG.md') -Raw)
+        body             = [string](Get-Content (Join-Path $PSScriptRoot 'CHANGELOG.md') -Raw -Encoding UTF8)
         draft            = $false
         prerelease       = $false
     }
