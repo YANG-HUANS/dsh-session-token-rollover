@@ -1,0 +1,14 @@
+- insert:
+    - id: session-token-rollover
+      name: 'dsh-session-token-rollover'
+      config:
+        enabled: true
+        mode: digest
+        maxTokens: 0
+        ratio: 0.85
+        onMaxTokens: true
+        allowSubagent: false
+        keepRecent: 8
+        maxCharsPerMessage: 500
+        maxTotalChars: 6000
+        autoPrompt: true

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Token Rollover",
+    "description": "When a conversation reaches its token budget, opens a new session that inherits the previous content."
+  }
+}

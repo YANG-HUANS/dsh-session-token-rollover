@@ -1,0 +1,42 @@
+{
+  "name": "dsh-session-token-rollover",
+  "version": "1.0.0",
+  "description": "DSH plugin: when a conversation runs out of token budget, open a new session that inherits the previous one's content.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "dsh-plugin",
+    "session",
+    "token",
+    "context-window",
+    "rollover"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

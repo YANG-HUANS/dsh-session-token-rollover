@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "会话 Token 续接",
+    "description": "对话触达 token 上限时自动新开会话，并把上一会话的内容继承过去。"
+  }
+}
