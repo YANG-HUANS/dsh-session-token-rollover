@@ -48,8 +48,8 @@ turn/end ──► ctx.tokenMeter.measure(session)
 
 ```powershell
 # 按你的 DSH 版本选一种：
-#   install_bundle target: github:OWNER/dsh-session-token-rollover
-#   pnpm add github:OWNER/dsh-session-token-rollover   然后在 dsh.profile.bundles 里加 "dsh-session-token-rollover"
+#   install_bundle target: github:YANG-HUANS/dsh-session-token-rollover
+#   pnpm add github:YANG-HUANS/dsh-session-token-rollover   然后在 dsh.profile.bundles 里加 "dsh-session-token-rollover"
 ```
 
 也可以先在本地 `npm pack` 出 tgz，再用 `file:` 依赖安装。
